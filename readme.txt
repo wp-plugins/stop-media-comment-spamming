@@ -33,7 +33,7 @@ If only there was a plugin that allowed you to stop visitors leaving comments on
 Ta da!  Here's one.
 
 = Plugin Page =
-[Stop Media Comment Spamming](http://www.limecanvas.com/stopping-wordpress-media-comment-spamming/ "Stop Media Commpent Spamming WordPress Plugin")
+[Stop Media Comment Spamming](http://www.limecanvas.com/stopping-wordpress-media-attachment-comment-spamming/ "Stop Media Commpent Spamming WordPress Plugin")
 
 == Installation ==
 
