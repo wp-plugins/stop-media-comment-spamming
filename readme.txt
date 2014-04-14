@@ -1,10 +1,9 @@
 === Stop Media Comment Spamming ===
-Contributors: Lime Canvas Ltd.
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6K8TNJNLANYZW
+Contributors: limecanvas
 Tags: Stop Comment Spam,Stop Media Comment Spam,Stop Media Comments,Remove Media Comments,Remove Attachment Comments
 Requires at least: 2.8
-Tested up to: 3.4.2
-Stable tag: 1.0
+Tested up to: 3.9 RC1
+Stable tag: 1.1
 
 Stops media comment spamming by removing the ability to comment on attachments.
 
