@@ -4,7 +4,7 @@
 Plugin Name: Stop Media Comment Spamming
 Plugin URI: http://www.limecanvas.com/stopping-wordpress-media-attachment-comment-spamming/
 Description: Stops media comment spamming by removing the ability to comment on attachments.  Other post types are not affected.
-Version: 1.1
+Version: 1.2
 Author: Lime Canvas
 Author URI: http://www.limecanvas.com/about/
 
@@ -25,22 +25,34 @@ Author URI: http://www.limecanvas.com/about/
 
 */
 
-/** Stop comments being used on Media Files **/
-/** Navite for WordPress only **/
-add_filter( 'comments_open', 'stopMediaComments', 10, 2 );
-function stopMediaComments( $open, $post_id ) {
+/**
+ * Stop comments being used on Media Files
+ *
+ * @param $open
+ * @param $post_id
+ * @return bool
+ */
+function lc_stop_media_comments( $open, $post_id ) {
   $post = get_post( $post_id );
   if ( 'attachment' == $post->post_type )
     $open = false;
   return $open;
 }
+add_filter( 'comments_open', 'lc_stop_media_comments', 10, 2 );
 
-/** Temporarilly disable commnets for the current post **/
-/** This is used to get around non-native WordPress plugins **/
-add_filter('get_header', 'lcTurnCommentsOff');
-function lcTurnCommentsOff(){
-      global $post;
-  if ( 'attachment' == $post->post_type )
-      $post->comment_status="closed";
+
+/**
+ * Temporarily disable comments for the current post
+ * This is used to get around non-native WordPress plugins
+ */
+function lc_turn_attachment_comments_off(){
+    global $post;
+    if( is_object( $post ) && !is_null( $post ) ) {
+        if ('attachment' == $post->post_type) {
+            $post->comment_status = "closed";
+        }
+    }
 }
+add_filter('get_header', 'lc_turn_attachment_comments_off');
+
 ?>
