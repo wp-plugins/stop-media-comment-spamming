@@ -4,7 +4,7 @@
 Plugin Name: Stop Media Comment Spamming
 Plugin URI: http://www.limecanvas.com/stopping-wordpress-media-attachment-comment-spamming/
 Description: Stops media comment spamming by removing the ability to comment on attachments.  Other post types are not affected.
-Version: 1.2
+Version: 1.3
 Author: Lime Canvas
 Author URI: http://www.limecanvas.com/about/
 
